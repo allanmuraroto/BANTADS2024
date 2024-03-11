@@ -1,0 +1,26 @@
+.client-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .client-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .client-container p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .client-container div {
+    font-size: 20px;
+  }
+  
+  .client-container .negative {
+    color: red;
+  }
+  
+  .dashboard-container {
+    margin-top: 20px;
+  }

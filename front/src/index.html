@@ -9,6 +9,16 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
 </head>
 
+<div class="client-container">
+  <h1>Bem-vindo, Cliente!</h1>
+  <p>Seu Saldo Atual:</p>
+  <div [class.negative]="isNegativeBalance">{{ clientDetails.balance | currency: 'BRL' }}</div>
+
+  <div class="dashboard-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
 <body>
   <app-root></app-root>
 </body>
