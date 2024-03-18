@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alteração de Perfil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Alteração de Perfil</h2>
+    <form id="profileForm">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="salary">Salário:</label>
+      <input type="number" id="salary" name="salary" required><br><br>
+      <label for="balance">Saldo:</label>
+      <input type="text" id="balance" name="balance" readonly><br><br>
+      <label for="manager">Gerente:</label>
+      <input type="text" id="manager" name="manager" readonly><br><br>
+      <button type="submit">Salvar Alterações</button>
+    </form>
+  </div>
+</body>
+</html>
