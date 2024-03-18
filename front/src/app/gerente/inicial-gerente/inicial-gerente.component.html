@@ -1,27 +1,73 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">Bem-vindo, Fulano</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Clientes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sair</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  <div class="container mt-4">
-    <h1>Tela do Gerente</h1>
-    <p>Esta é uma página simples para o Gerente.</p>
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h2>Bem-vindo, FULANO!</h2>
+    <p>Aqui está o resumo das informações do dia:</p>
   </div>
-  <button type="submit">
-    Save
-  </button>
+
+  <div class="dashboard-cards">
+    <div class="card card-primary">
+      <div class="card-title">Total de Clientes</div>
+      <p>1,234</p>
+    </div>
+    <div class="card card-success">
+      <div class="card-title">Saldo Total</div>
+      <p>R$ 5,678,910</p>
+    </div>
+    <div class="card card-warning">
+      <div class="card-title">Saldo Devedor: </div>
+      <p>R$ -1.234,56</p>
+    </div>
+    <div class="card card-info">
+      <div class="card-title">Novos Clientes</div>
+      <p>45</p>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" class="form-control" placeholder="Pesquisar cliente por nome, CPF ou conta...">
+  </div>
+
+  <div class="table-responsive">
+    <table class="table">
+      <!-- Cabeçalho e corpo da tabela -->
+    </table>
+    <div class="dashboard-container">
+      <!-- Cabeçalho e resumo rápido aqui -->
+
+
+      <!-- Nova Tabela para Avaliação de Novos Clientes -->
+      <div class="table-responsive my-3">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Score</th>
+              <th>Salário</th>
+              <th>Idade</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>João Silva</td>
+              <td>720</td>
+              <td>R$ 2.500,00</td>
+              <td>30</td>
+              <td>
+                <button class="btn btn-success">Aceitar</button>
+                <button class="btn btn-danger">Recusar</button>
+              </td>
+            </tr>
+            <!-- Repita para outros clientes -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Rodapé -->
+      <footer class="text-center my-4">
+        BANTADS - Todos os direitos reservados
+      </footer>
+    </div>
+
+  </div>
+</div>

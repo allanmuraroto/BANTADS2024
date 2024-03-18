@@ -1,12 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MenubarComponent } from '../menubar/menubar.component';
 
 @Component({
   selector: 'app-inicial-gerente',
-  standalone: true,
-  imports: [],
   templateUrl: './inicial-gerente.component.html',
-  styleUrl: './inicial-gerente.component.css'
+  styleUrls: ['./inicial-gerente.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MenubarComponent
+  ]
 })
-export class InicialGerenteComponent {
-
-}
+export class InicialGerenteComponent {}

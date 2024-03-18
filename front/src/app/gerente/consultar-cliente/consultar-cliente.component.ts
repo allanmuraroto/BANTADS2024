@@ -3,9 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-consultar-cliente',
   standalone: true,
-  imports: [],
+  imports: [
+
+  ],
   templateUrl: './consultar-cliente.component.html',
-  styleUrl: './consultar-cliente.component.css'
+  styleUrls: ['./consultar-cliente.component.css']
 })
 export class ConsultarClienteComponent {
 
