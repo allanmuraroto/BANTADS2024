@@ -1,42 +1,28 @@
 <div class="container-fluid mt-5">
-    <div class="container">
-      <table class="row-border hover">
-        <thead>
-          <tr>
-            <th>Cpf</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Salario</th>
-            <th>Saldo</th>
-            <th>cidade</th>
-            <th>estado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>R$
-
-            </td>
-            <td>R$
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="container">
+    <table class="table table-bordered">
+      <thead style="background-color: #778899;">
+        <tr>
+          <th>Cpf</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Salario</th>
+          <th>Saldo</th>
+          <th>Cidade</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pessoa of pessoas">
+          <td>{{ pessoa.cpf }}</td>
+          <td>{{ pessoa.nome }}</td>
+          <td>{{ pessoa.email }}</td>
+          <td>R$ {{ pessoa.salario }}</td>
+          <td>R$ {{ pessoa.saldo }}</td>
+          <td>{{ pessoa.cidade }}</td>
+          <td>{{ pessoa.estado }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container-fluid mt-5">
+    <div class="container">
+      <table class="table table-bordered table-hover text-center">
+        <thead class="thead-dark">
+          <tr>
+            <th>Cpf</th>
+            <th>Nome</th>
+            <th>Saldo</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of clientes">
+            <td>{{ person.cpf }}</td>
+            <td>{{ person.nome }}</td>
+            <td>R$ {{ person.conta?.saldo }}</td>
+            <td>{{ person.endereco?.cidade }}</td>
+            <td>{{ person.endereco?.estado }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

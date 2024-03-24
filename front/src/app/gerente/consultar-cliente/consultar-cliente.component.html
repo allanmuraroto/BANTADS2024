@@ -1,107 +1,69 @@
-<div>
-    <div style="width: 70%; padding-top: 40px; margin: 0 auto !important;float: none !important;">
-      <div class="search-container-cpf">
-        <form>
-          <input type="text" placeholder="Procurar Cliente por CPF" id="cpf" name="cpf">
-          <button type="submit">
-            <i class="fa fa-search"></i></button>
-        </form>
-        <div class="row justify-content-md-center">
-
-          <div class="row">
-            <h4>Dados do cliente</h4>
-            <div class="col-5">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <p>Nome<br>
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Cpf <br>
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Email <br>
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Salário <br> R$
-
-                </p>
-                </li>
-              </ul>
-            </div>
-            <div class="col-3">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <p>Numero da conta <br>
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Saldo <br> R$
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Status <br>
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Limite <br> R$
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Data de Abertura <br>
-
-                </p>
-                </li>
-              </ul>
-            </div>
-            <div class="col-4 ">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <p>Estado <br>
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Cidade <br>
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Cep <br>
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Logradouro <br>
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Numero <br>
-
-                </p>
-                </li>
-                <li class="list-group-item">
-                  <p>Tipo <br>
-
-                </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<div style="width: 70%; padding-top: 40px; margin: 0 auto !important; float: none !important;">
+  <div class="search-container-cpf">
+    <form style="margin-bottom: 20px;">
+      <input type="text" placeholder="Procurar Cliente por CPF" id="cpf" name="cpf" style="padding: 8px; border: 1px solid #ccc;">
+      <button type="submit" style="padding: 8px 15px; background-color: #007bff; color: #fff; border: none; cursor: pointer; border-radius: 4px;">
+        <i class="fa fa-search"></i> Procurar</button>
+    </form>
+    <div class="row justify-content-md-center">
+      <h4 style="text-align: center; margin-bottom: 20px;">Dados do cliente</h4>
+      <div class="col-md-5">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <p style="margin: 0;">Nome: <strong>{{ nome }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">CPF: <strong>{{ cpf }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">Email: <strong>{{ email }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">Salário: <strong>R$ {{ salario }}</strong></p>
+          </li>
+        </ul>
       </div>
-      <div>
+      <div class="col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <p style="margin: 0;">Número da conta: <strong>{{ numeroConta }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">Saldo: <strong>R$ {{ saldo }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">Status: <strong>{{ status }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">Limite: <strong>R$ {{ limite }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">Data de Abertura: <strong>{{ dataAbertura }}</strong></p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <p style="margin: 0;">Estado: <strong>{{ estado }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">Cidade: <strong>{{ cidade }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">CEP: <strong>{{ cep }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">Logradouro: <strong>{{ logradouro }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">Número: <strong>{{ numero }}</strong></p>
+          </li>
+          <li class="list-group-item">
+            <p style="margin: 0;">Tipo: <strong>{{ tipo }}</strong></p>
+          </li>
+        </ul>
       </div>
     </div>
-    <div>
-    </div>
+  </div>
+</div>
