@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transferência</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .message {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      display: none;
+    }
+    .success {
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+      color: #155724;
+    }
+    .error {
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Transferência</h2>
+  <input type="text" id="contaDestino" placeholder="Número da Conta Corrente Destino">
+  <input type="number" id="saldo" placeholder="Saldo para Transferência">
+  <button onclick="realizarTransferencia()">Transferir</button>
+  <div class="message" id="message"></div>
+</div>
+
+<script>
+  function realizarTransferencia() {
+    var contaDestino = document.getElementById('contaDestino').value;
+    var saldo = document.getElementById('saldo').value;
+
+
+    exibirMensagem("Transferência realizada com sucesso para a conta " + contaDestino, 'success');
+  }
+
+  function exibirMensagem(msg, type) {
+    var messageDiv = document.getElementById('message');
+    messageDiv.textContent = msg;
+    messageDiv.className = 'message ' + type;
+    messageDiv.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
