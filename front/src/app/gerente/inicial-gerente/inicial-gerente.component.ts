@@ -1,3 +1,5 @@
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MenubarComponent } from '../menubar/menubar.component';
@@ -7,6 +9,7 @@ import { MenubarComponent } from '../menubar/menubar.component';
   templateUrl: './inicial-gerente.component.html',
   styleUrls: ['./inicial-gerente.component.css'],
   standalone: true,
+
   imports: [
     CommonModule,
     MenubarComponent
