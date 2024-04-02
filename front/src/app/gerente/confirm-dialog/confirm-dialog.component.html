@@ -1,8 +1,30 @@
-<h2 mat-dialog-title>Confirmação</h2>
+<!-- <h2 mat-dialog-title>Confirmação</h2>
 <div mat-dialog-content>
   <p>{{data.message}}</p>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onConfirm()">Sim</button>
   <button mat-button (click)="onDismiss()">Não</button>
+</div> -->
+
+
+<div class="container">
+  <img class="image" src="cadeado.png" alt="Cadeado">
+  <h2 class="title">Confirmação de Transação</h2>
+  <p class="text">Prezado(a) cliente, para sua segurança, solicitamos a confirmação da transação abaixo:</p>
+  <ul class="details">
+    <li>Data: 2023-11-14</li>
+    <li>Valor: R$ 1.000,00</li>
+    <li>Destino: Banco XYZ</li>
+    <li>Titular: João Silva</li>
+  </ul>
+  <div class="checkbox">
+    <input type="checkbox" id="notify" name="notify">
+    <label for="notify">Desejo receber um e-mail confirmando esta transação.</label>
+  </div>
+  <div class="progress-bar"></div>
+  <div class="buttons">
+    <button class="button-confirm">Confirmar transação</button>
+    <button class="button-cancel">Cancelar transação</button>
+  </div>
 </div>

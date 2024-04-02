@@ -1,0 +1,65 @@
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.text {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.details {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.details li {
+  margin-bottom: 5px;
+}
+
+.checkbox {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  background-color: #f00;
+  height: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.buttons {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.button-confirm {
+  background-color: #008000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.button-cancel {
+  background-color: #ccc;
+  color: #333;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
