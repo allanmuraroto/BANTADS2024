@@ -1,0 +1,24 @@
+<div class="container d-flex">
+    <div class="well">
+        <div class="image">
+            <img src="assets/img/user.png" width="150">
+        </div>
+        <legend>LOGIN</legend>
+        <form>
+            <div class="form-group mt-3">
+                <label><b>USUÁRIO</b></label>
+                <input type="text" class="form-control" placeholder="Digite o usuário" id="usuario" name="usuario" required />
+            </div>
+            <div class="form-group mt-3">
+                <label><b>SENHA</b></label>
+                <input type="password" class="form-control" placeholder="Digite a senha" id="password" name="password" required />                    
+            </div>
+            <div class="form-group mt-5 d-flex justify-content-center">
+                <button class="btn btn-primary" style= "background-color: #6a0dad; border-color: #6a0dad ;"  type="button" routerLink="/gerente/lista" (click)="entrar()"> LOGAR </button>
+            </div>
+        </form>
+        <div class="well">
+            <p class="form-group mt-5 d-flex justify-content-center"><a routerLink="/autoCadastro" style= "color: #6a0dad">CRIAR SUA CONTA</a></p>
+        </div>
+    </div>
+</div>
