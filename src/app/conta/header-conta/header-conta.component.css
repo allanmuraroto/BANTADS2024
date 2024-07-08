@@ -1,25 +1,25 @@
-/* @import url('https://fonts.googleapis.com/css?family=Roboto');
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
     font-family: 'Roboto', sans-serif;
-} */
+} 
 
-/* * {
+* {
     margin: 0;
     padding: 0;
-} */
+} 
 
-/* i {
+i {
     margin-right: 10px;
-} */
-/* 
+} 
+
 .navbar-logo {
     padding: 15px;
     color: #fff;
 }
 
 .navbar-mainbg {
-    background-color: #35427afa;
+    background-color: #6a0dad;
     padding: .1rem;
 }
 
@@ -28,21 +28,19 @@ body {
     flex-direction: row;
     gap: 3rem;
     font-size: 1rem;
-} */
+} 
 
-/* a {
+a {
     color: #fff;
 }
 
 a:hover {
     color: #92a6ff;
-} */
-
-/* .nav-logout {
+} 
+.nav-logout {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.3rem;
     margin-right: 1rem;
-} */
-
+}

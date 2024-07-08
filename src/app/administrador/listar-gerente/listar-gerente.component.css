@@ -1,7 +1,7 @@
 h1 {
     text-transform: uppercase;
     font-weight: 600;
-    color: #35427a;
+    color:black;
     margin: 5rem 0;
 }
 
@@ -20,7 +20,7 @@ td {
 }
 
 td {
-    color: #35427a;
+    color: #6a0dad;
 }
 
 th {
@@ -28,7 +28,7 @@ th {
 }
 
 thead th {
-    background-color: #35427a;
+    background-color:#6a0dad;
 }
 
 
@@ -41,7 +41,7 @@ tbody td {
 }
 
 .nova-peca {
-    background-color: #35427a;
+    background-color: #6a0dad;
     color: white;
 }
 

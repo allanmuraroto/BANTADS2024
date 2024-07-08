@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="form-btns">
-                <button type="button" class="form-btn btn-salvar" (click)="salvar()" [disabled]="!formAdministrador.form.valid">
+                <button type="button" style="background-color: #6a0dad;" class="form-btn btn-salvar" (click)="salvar()" [disabled]="!formAdministrador.form.valid">
                     <i *ngIf="!loading" class="fa fa-save" aria-hidden="true"></i> 
                     <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> Salvar
                 </button>
