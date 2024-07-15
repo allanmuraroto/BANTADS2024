@@ -1,0 +1,11 @@
+version: "3.2"
+services:
+  test-service:
+    image: alpine:latest
+    command: ["sh", "-c", "while true; do echo hello world; sleep 1; done"]
+    networks:
+      - test-net
+
+networks:
+  test-net:
+    driver: bridge
