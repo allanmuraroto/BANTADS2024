@@ -1,0 +1,112 @@
+version: "3.2"
+services:
+  api-gateway:
+    image: alpine
+    command: ["sh", "-c", "while true; do sleep 10; done"]
+    restart: always
+    mem_limit: 512m
+    mem_reservation: 128m
+    cpus: 0.5
+    ports:
+      - "3000:3000"
+    networks:
+      - bantads-net
+
+  auth-service:
+    image: alpine
+    command: ["sh", "-c", "while true; do sleep 10; done"]
+    restart: always
+    mem_limit: 512m
+    mem_reservation: 128m
+    cpus: 0.5
+    networks:
+      - bantads-net
+
+  clientes-service:
+    image: alpine
+    command: ["sh", "-c", "while true; do sleep 10; done"]
+    restart: always
+    mem_limit: 512m
+    mem_reservation: 128m
+    cpus: 0.5
+    networks:
+      - bantads-net
+
+  gerentes-service:
+    image: alpine
+    command: ["sh", "-c", "while true; do sleep 10; done"]
+    restart: always
+    mem_limit: 512m
+    mem_reservation: 128m
+    cpus: 0.5
+    networks:
+      - bantads-net
+
+  contas-service:
+    image: alpine
+    command: ["sh", "-c", "while true; do sleep 10; done"]
+    restart: always
+    mem_limit: 512m
+    mem_reservation: 128m
+    cpus: 0.5
+    networks:
+      - bantads-net
+
+  tests-gun:
+    image: alpine
+    command: ["sh", "-c", "while true; do sleep 10; done"]
+    restart: always
+    mem_limit: 512m
+    mem_reservation: 128m
+    cpus: 0.5
+    ports:
+      - "51204:51204"
+    networks:
+      - bantads-net
+
+  rabbitmq:
+    image: alpine
+    command: ["sh", "-c", "while true; do sleep 10; done"]
+    mem_limit: 3g
+    mem_reservation: 1g
+    cpus: 0.5
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - bantads-net
+
+  mysql-database:
+    image: alpine
+    command: ["sh", "-c", "while true; do sleep 10; done"]
+    platform: linux/amd64
+    mem_limit: 512m
+    mem_reservation: 128m
+    cpus: 0.5
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 26677
+        hard: 46677
+    networks:
+      - bantads-net
+
+  phpmyadmin:
+    image: alpine
+    command: ["sh", "-c", "while true; do sleep 10; done"]
+    restart: always
+    mem_limit: 512m
+    mem_reservation: 128m
+    cpus: 0.5
+    ports:
+      - "8081:80"
+    networks:
+      - bantads-net
+
+volumes:
+  rabbitmq_data:
+  rabbitmq_log:
+
+networks:
+  bantads-net:
+    driver: bridge
