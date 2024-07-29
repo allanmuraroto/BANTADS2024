@@ -1,4 +1,4 @@
-package com.bantads.clientes.events;
+package com.bantads.auth.events;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.annotation.RabbitListenerConfigurer;

@@ -1,13 +1,15 @@
-package com.bantads.clientes.events;
+package com.bantads.auth.events;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import com.bantads.clientes.ClientesService;
-import com.bantads.clientes.CriarClienteDTO;
-import com.bantads.clientes.events.RemoverClienteEvent;
-import com.bantads.clientes.events.CriarClienteEvent;
+import com.bantads.auth.CriarAuthDTO;
+import com.bantads.auth.AuthService;
+import com.bantads.auth.AuthService;
+import com.bantads.auth.events.RemoverAutenticacaoEvent;
+import com.bantads.auth.events.CriarAutenticacaoEvent;
+import com.bantads.auth.events.SetPasswordEvent;
 
 /**
  * This class receives the events and triggers the associated
@@ -17,34 +19,33 @@ import com.bantads.clientes.events.CriarClienteEvent;
 @Component
 class EventsHandler {
 
-    private ClientesService clientesService;
+    private AuthService authService;
 
-    EventsHandler(final ClientesService clientesService) {
-        this.clientesService = clientesService;
+    EventsHandler(final AuthService authService) {
+        this.authService = authService;
     }
 
-    @RabbitListener(queues = "criar_cliente")
-    void handleCriarClienteEvent(final CriarClienteEvent clienteEvent) {
-        CriarClienteDTO ccd = new CriarClienteDTO();
-        ccd.setNome(clienteEvent.getNome());
-        ccd.setCpf(clienteEvent.getCpf());
-        ccd.setEmail(clienteEvent.getEmail());
-        ccd.setSalario(clienteEvent.getSalario());
-        ccd.setEnderecoCep(clienteEvent.getEnderecoCep());
-        ccd.setEnderecoCidade(clienteEvent.getEnderecoCidade());
-        ccd.setEnderecoComplemento(clienteEvent.getEnderecoComplemento());
-        ccd.setEnderecoEstado(clienteEvent.getEnderecoEstado());
-        ccd.setEnderecoLogradouro(clienteEvent.getEnderecoLogradouro());
-        ccd.setEnderecoNumero(clienteEvent.getEnderecoNumero());
-        ccd.setEnderecoTipo(clienteEvent.getEnderecoTipo());
-        clientesService.addCliente(ccd);
-        log.info("cliente criada com sucesso cpf:" + ccd.getCpf());
+    @RabbitListener(queues = "criar_autenticacao")
+    void handleCriarAuthEvent(final CriarAutenticacaoEvent cae) {
+        CriarAuthDTO ccd = new CriarAuthDTO();
+        ccd.setEmail(cae.getEmail());
+        ccd.setCpf(cae.getCpf());
+        ccd.setNivel(cae.getNivel());
+        ccd.setSenha(cae.getSenha());
+        authService.create(ccd);
+        log.info("Autenticacao criada email :" + cae.getEmail());
     }
 
-    @RabbitListener(queues = "excluir_cliente")
-    void handleCriarClienteEvent(final RemoverClienteEvent removeCliente) {
-        clientesService.removeCliente(removeCliente.getCpf());
-        log.info("cliente criada com sucesso cpf:" + removeCliente.getCpf());
+    @RabbitListener(queues = "excluir_autenticacao")
+    void handleRemoverAuthEvent(final RemoverAutenticacaoEvent cae) {
+        authService.remove(cae.getCpf());
+        log.info("Autenticacao removed cliente cpf:" + cae.getCpf());
+    }
+
+    @RabbitListener(queues = "alterar_senha_autenticacao")
+    void handleRemoverAuthEvent(final SetPasswordEvent cae) {
+        authService.setPassword(cae.getEmail(), cae.getSenha());
+        log.info("Autenticacao atualizada cliente emai:" + cae.getEmail());
     }
 
 }
