@@ -1,4 +1,4 @@
-package com.bantads.contas.dto;
+package com.bantads.gerentes;
 
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class StoreGerenteDTO implements Serializable {
+public class StoreGerenteDTO implements Serializable{
     private String cpf;
 
     public String getCpf() {

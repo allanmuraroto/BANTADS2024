@@ -1,11 +1,7 @@
 package com.bantads.gerentes;
 
 import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,22 +11,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "gerente")
-public class Gerente implements Serializable {
-
-    @Id
-    @Column(name = "cpf")
-    @NotNull
-    private String cpf;
-
-    @Column(name = "nome")
-    @NotNull
+public class AtualizarGerenteDTO implements Serializable {
     private String nome;
-
-    @Column(name = "email", unique = true)
-    @NotNull
     private String email;
+    private String cpf;
 
     public String getNome() {
         return this.nome;
@@ -57,3 +41,4 @@ public class Gerente implements Serializable {
     }
 
 }
+

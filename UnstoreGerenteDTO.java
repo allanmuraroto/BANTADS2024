@@ -1,4 +1,4 @@
-package com.bantads.contas.dto;
+package com.bantads.gerentes;
 
 import java.io.Serializable;
 
